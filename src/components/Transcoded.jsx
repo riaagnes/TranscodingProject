@@ -106,8 +106,8 @@ const Transcoded = ({ user, onSearch }) => {
   let output;
 
   if (isTranscoded) {
-   
     output = (
+      <Col>
       <Card className="mb-3" style={{ color: "#000" }}>
         <a href={url} target="_blank">
           <Card.Img src={pic} />
@@ -116,6 +116,7 @@ const Transcoded = ({ user, onSearch }) => {
           <Card.Title>Video After Transcoding</Card.Title>
         </Card.Body>
       </Card>
+      </Col>
     );
   }
 
@@ -159,9 +160,9 @@ const Transcoded = ({ user, onSearch }) => {
       <div className="col text-center">
         <h1> Ria's Trascoding Playgroud</h1>
       </div>
-      <Container>
-        <Row>
-          <Col>
+      <Container className="text-center">
+        <Row className="text-center">
+          <Col className="text-center">
             <Card className="mb-3" style={{ color: "#000" }}>
               <a
                 href="https://dw00dsohded4a.cloudfront.net/source%20folder/bunnyoutput1.mp4"
@@ -175,7 +176,7 @@ const Transcoded = ({ user, onSearch }) => {
             </Card>
           </Col>
 
-          <Col>{output}</Col>
+          {output}
         </Row>
       </Container>
       <div class="col text-center">
@@ -217,11 +218,12 @@ const Transcoded = ({ user, onSearch }) => {
             </div>
             <div className="col-3">
               <p>
-               The project uses AWS Elemental MediaConvert to transcode the video file based on the bitrate specified by the user. The static 
-               content (HTML/CSS/JavaScript) is served using AWS Amplify. The project uses API Gateway and Lambda to invoke the MediaConvert Job.
-               The user can also monitor the Job by subscribing to the SNS topic. The frontend is powered by React.
-
-      
+                The project uses AWS Elemental MediaConvert to transcode the
+                video file based on the bitrate specified by the user. The
+                static content (HTML/CSS/JavaScript) is served using AWS
+                Amplify. The project uses API Gateway and Lambda to invoke the
+                MediaConvert Job. The user can also monitor the Job by
+                subscribing to the SNS topic. The frontend is powered by React.
               </p>
             </div>
           </div>
