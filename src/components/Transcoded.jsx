@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 import pic from "./pic.png";
-import media from "./video.jpeg";
+import media from "./video.png";
 
 const Transcoded = ({ user, onSearch }) => {
   const [error, setError] = useState("");
