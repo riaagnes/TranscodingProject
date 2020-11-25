@@ -123,7 +123,7 @@ const Transcoded = ({ user, onSearch }) => {
     modalElement = (
       <div className="col text-center">
         Would you like to recieve notification about your Transcoding task?
-        <label> If yes, Please enter your email:</label>
+        <label> If yes, Please enter your email (optional):</label>
         <input
           type="text"
           className="form-control"
